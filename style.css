@@ -46,7 +46,11 @@ h1 {
     min-width: calc(100%* 4);
     transition: all ease-in .3s;
 }
-
+@media (max-width: 690px) {
+    .slider-content {
+        margin-bottom: 1.5rem;
+    }
+}
 .slide {
     display: grid;
     grid-template-columns: 1fr;
