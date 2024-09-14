@@ -3,7 +3,8 @@
     --main-color: #a0adf1;
     --second-color: #f0edf4;
     --background-color: #2f1a43;
-    --lg-breakpoint: 1007px; /* calc slide width*/
+    --lg-breakpoint: 1007px;
+    /* calc slide width*/
     --mobile-breakpoint: 670px;
 }
 
@@ -31,9 +32,9 @@ h1 {
 }
 
 .slider {
+
     width: 100%;
     margin: auto;
-    position: relative;
     overflow: hidden;
 }
 
@@ -51,6 +52,7 @@ h1 {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
 }
+
 @media (max-width: 1007px) {
     .slide {
         width: calc(100vw - 5rem);
@@ -59,30 +61,26 @@ h1 {
 
 .slide-description {
     color: var(--second-color);
-    margin-bottom: 1rem;
     font-size: 2rem;
 }
 
 .slider-nav {
-    position: absolute;
     display: flex;
+    transform: translateY(-110%);
+    justify-content: flex-end;
     gap: 1rem;
-    bottom: 2%;
-    right: 0;
-    z-index: 2;
 }
 
 @media (max-width: 690px) {
     .slider-nav {
-        right: 50%;
-        transform: translateX(50%);
-        bottom: 6rem;
+        transform: translateY(-320%);
+        justify-content: center;
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 450px) {
     .slider-nav {
-        bottom: 7rem;
+        transform: translateY(-350%);
     }
 }
 
@@ -110,12 +108,12 @@ input {
     box-sizing: border-box;
 }
 
-.bullet:hover span{
+.bullet:hover span {
     background-color: var(--second-color);
     border-color: var(--second-color);
 }
 
-.input:checked+.bullet span{
+.input:checked+.bullet span {
     background-color: var(--second-color);
 }
 
@@ -139,19 +137,13 @@ input {
 
 .slider-img {
     border-radius: 1%;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     overflow: hidden;
 }
 
 @media (max-width: 690px) {
     .slider-img {
-        margin-bottom: 6rem;
-    }
-}
-
-@media (max-width: 375px) {
-    .slider-img {
-        margin-bottom: 7rem;
+        margin-bottom: 4rem;
     }
 }
 
